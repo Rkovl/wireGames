@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
 
-      <main id='wrapper' className=" min-h-screen p-4 bg-gradient-to-tr from-stone-900 from-10% via-stone-800 via-30% to-stone-900 to-90%">
+      <main id='wrapper' className=" min-h-screen p-4 bg-gradient-to-tr from-stone-900 from-10% via-stone-800 via-30% to-stone-900 to-90% flex flex-col">
 
         <div id='header' className='p-20 flex'>
           <div className='flex-auto flex flex-row'>
@@ -16,12 +16,23 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-
+        <div id='body' className='flex flex-col px-40 py-0 flex-auto'>
+          <div id='gameName' className='font-mono text-5xl'>Legend of Zelda: Tears of the Kingdom</div>
+          <div id='gamesContainer' className='flex flex-row flex-nowrap flex-auto py-10'>
+            <div className='border-stone-600 bg-stone-800 border-double border-4 min-w-[40vh] max-h-[40vh]'></div>
+          </div>
+          <div className='flex flex-row px-20 gap-10 justify-center'>
+            <button className='rounded-full min-w-[10vh] min-h-[10vh] bg-stone-300'></button>
+            <button className='rounded-full min-w-[10vh] min-h-[10vh] bg-stone-300'></button>
+            <button className='rounded-full min-w-[10vh] min-h-[10vh] bg-stone-300'></button>
+            <button className='rounded-full min-w-[10vh] min-h-[10vh] bg-stone-300'></button>
+            <button className='rounded-full min-w-[10vh] min-h-[10vh] bg-stone-300'></button>
+            <button className='rounded-full min-w-[10vh] min-h-[10vh] bg-stone-300'></button>
+          </div>
         </div>
 
-        <div>
-
+        <div id='footer' className='p-20'>
+          
         </div>
         
       </main>
