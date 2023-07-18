@@ -1,4 +1,29 @@
+"use client"
+
 export default function Home() {
+
+  const handleClick = (direction) =>{
+    let container = document.getElementById("body")
+    let scrollAmount = container.scrollLeft
+    if(direction === "R"){
+      container.scrollTo({
+        top: 0,
+        left: scrollAmount + 500,
+        behavior: "smooth"
+
+      })
+    }
+    else{
+      container.scrollTo({
+        top: 0,
+        left: scrollAmount - 500,
+        behavior: "smooth"
+
+      })
+    }
+    console.log(scrollAmount)
+  }
+
   return (
     <>
 
@@ -9,13 +34,15 @@ export default function Home() {
             <img className='bg-yellow-500 rounded-full w-14 border-double border-4 border-stone-700' src='/logo.png'/>
           </div>
           <div className='basis-1/2'>
-            <div className="grid justify-items-end">
-              <p className='text-base font-mono pr-1'>1:20pm</p>
-              <img className='w-9/12 ' src='/icons.png'/>
+            <div className="grid 2xl:grid-cols-2 justify-items-end">
+              <p className='text-base font-mono pr-1 2xl:text-5xl'>1:20pm</p>
+              <img className='w-9/12 sm:w-3/12' src='/icons.png'/>
             </div>
           </div>
         </div>
 
+        <div className=" sm:bg-gradient-to-r from-transparent from-40% md:from-30% lg:from-25% 2xl:from-15% via-stone-850 via-60% md:via-50% lg:via-35% 2xl:via-25% to-stone-900 to-90 h-[15.5vh] inset-x-0 top-24 absolute z-10"></div>
+        <div className=" sm:bg-gradient-to-r from-transparent from-10%  to-stone-900 h-[45vh] inset-y-0 right-0 top-60 w-32 absolute z-10 md:hidden"></div>
         {/* <div id='body' className='grid px-2 py-0 grid-cols-1 gap-4 h-[65vh]'>
           <div id='gameName' className='font-mono text-4xl h-[15vh]'>Legend of Zelda: Tears of the Kingdom</div>
 
@@ -34,37 +61,53 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-        <div id='body' className=' px-2 py-0 h-[65vh] snap-x snap-mandatory overflow-x-auto w-full relative flex'>
+        <div id='body' className=' px-2 py-0 h-[70vh] snap-x snap-mandatory overflow-x-hidden w-full relative flex'>
 
-          
-            <div className=' snap-start scroll-mx-6 shrink-0 mr-6'>
+            <div id="legendOfZelda" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
               <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Legend of Zelda: Tears of the Kingdom</div>
+                <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+            </div>
+            <div id="marioParty" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Mario Party 64</div>
+                <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+            </div>
+            <div id="killerKing" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Killer King Fighter Z-XL: The Reborn</div>
+                <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+            </div>
+            <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>League of Legends</div>
               <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
             </div>
-            <div className=' snap-start scroll-mx-6 shrink-0 mr-6'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Legend of Zelda: Tears of the Kingdom</div>
-              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+
+            <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'></div>
+              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src=""></img>
             </div>
-            <div className=' snap-start scroll-mx-6 shrink-0 mr-6'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Legend of Zelda: Tears of the Kingdom</div>
-              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+            <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'></div>
+              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src=""></img>
             </div>
-            <div className=' snap-start scroll-mx-6 shrink-0 mr-6'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Legend of Zelda: Tears of the Kingdom</div>
-              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+            <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'></div>
+              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src=""></img>
+            </div>
+            <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'></div>
+              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src=""></img>
             </div>
 
         </div>
 
 
-        <div id='footer' className='p-2 h-[20vh]'>
-          <div className='grid grid-rows-2 grid-flow-col px-20 gap-10 justify-center '>
+        <div id='footer' className='p-2 h-[15vh]'>
+          <div className='grid grid-rows-1 grid-flow-col px-20 gap-10 justify-center '>
+            <button className='rounded-full p-10 bg-stone-300' onClick={()=>handleClick("L")}></button>
+            <button className='rounded-full p-10 bg-stone-300'></button>
+            <button className='rounded-full p-10 bg-stone-300' onClick={()=>handleClick("R")}></button>
+            {/* <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
             <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
+            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button> */}
 
           </div>
         </div>
