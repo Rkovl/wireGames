@@ -61,7 +61,7 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-        <div id='body' className=' px-2 py-0 h-[70vh] snap-x snap-mandatory overflow-x-hidden w-full relative flex'>
+        <div id='body' className=' px-2 py-0 h-[65vh] snap-x snap-mandatory overflow-x-hidden w-full relative flex'>
 
             <div id="legendOfZelda" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
               <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Legend of Zelda: Tears of the Kingdom</div>
@@ -100,14 +100,14 @@ export default function Home() {
         </div>
 
 
-        <div id='footer' className='p-2 h-[15vh]'>
-          <div className='grid grid-rows-1 grid-flow-col px-20 gap-10 justify-center '>
-            <button className='rounded-full p-10 bg-stone-300' onClick={()=>handleClick("L")}></button>
-            <button className='rounded-full p-10 bg-stone-300'></button>
-            <button className='rounded-full p-10 bg-stone-300' onClick={()=>handleClick("R")}></button>
-            {/* <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button>
-            <button className='rounded-full min-w-[12vw] min-h-[12vw] bg-stone-300'></button> */}
+        <div id='footer' className='p-2 h-[20vh] justify-center items-center flex'>
+          <div className='grid grid-cols-3 px-5 gap-8 justify-center w-[500px] lg:w-[500px]'>
+            <button className='rounded-full p-7 bg-stone-300' onClick={()=>handleClick("L")}></button>
+            <button className='rounded-full p-7 bg-stone-300'></button>
+            <button className='rounded-full p-7 bg-stone-300' onClick={()=>handleClick("R")}></button>
+            <button className='rounded-full p-7 bg-stone-300'></button>
+            <button className='rounded-full p-7 bg-stone-300'></button>
+            <button className='rounded-full p-7 bg-stone-300'></button>
 
           </div>
         </div>
