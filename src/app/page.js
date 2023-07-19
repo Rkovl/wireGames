@@ -1,6 +1,19 @@
 "use client"
 
+import {useState, useEffect } from 'react';
+
+
 export default function Home() {
+
+  const [dt, setDt] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+      let secTimer = setInterval( () => {
+        setDt(new Date().toLocaleTimeString())
+      },1000)
+  
+      return () => clearInterval(secTimer);
+  }, []);
 
   const handleClick = (direction) =>{
     let container = document.getElementById("body")
@@ -35,7 +48,7 @@ export default function Home() {
           </div>
           <div className='basis-1/2'>
             <div className="grid 2xl:grid-cols-2 justify-items-end">
-              <p className='text-base font-mono pr-1 2xl:text-5xl'>1:20pm</p>
+              <p className='text-base font-mono pr-1 2xl:text-5xl'>{dt}</p>
               <img className='w-9/12 sm:w-3/12' src='/icons.png'/>
             </div>
           </div>
@@ -64,20 +77,20 @@ export default function Home() {
         <div id='body' className=' px-2 py-0 h-[65vh] snap-x snap-mandatory overflow-x-hidden w-full relative flex'>
 
             <div id="legendOfZelda" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Legend of Zelda: Tears of the Kingdom</div>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh] items-center flex'>Legend of Zelda: Tears of the Kingdom</div>
                 <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
             </div>
             <div id="marioParty" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Mario Party 64</div>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh] items-center flex'>Mario Party 64</div>
                 <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
             </div>
             <div id="killerKing" className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>Killer King Fighter Z-XL: The Reborn</div>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh] items-center flex'>Killer King Fighter Z-XL: The Reborn</div>
                 <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
             </div>
             <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
-              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh]'>League of Legends</div>
-              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="zeldaTestImage.jpg"></img>
+              <div id='gameName' className='font-mono text-4xl h-[15vh] w-[40vh] items-center flex'>Anime List Gambit</div>
+              <img className="border-stone-600 bg-stone-800 border-double border-4 h-[40vh] w-[40vh]" src="animeListGambitLogo.png"></img>
             </div>
 
             <div className=' snap-start scroll-mx-5 shrink-0 mr-6 xl:mr-14'>
